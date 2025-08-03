@@ -14,14 +14,18 @@ export class ClienteCreateComponent implements OnInit {
   cliente: Cliente = {
     cliNome: '',
     cliCpf: '',
+    cliStatus: '',
+
     conCelular: '',
     conTelefoneComercial: '',
     conEmail: '',
+
     endRua: '',
     endNumero: '',
     endCidade: '',
     endCep: '',
-    endEstado: ''
+    endEstado: '',
+    endBairro: ''
   };
 
   constructor(

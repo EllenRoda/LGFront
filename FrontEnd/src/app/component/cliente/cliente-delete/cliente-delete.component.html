@@ -1,10 +1,13 @@
-<mat-card>
-  <mat-card-title class="titulo">Excluir cliente</mat-card-title>
+<mat-card class="fundo1">
+  <div class="cor-normal"> 
+    <mat-card-title>Excluir Cliente</mat-card-title>
+  </div>
 
-  <form *ngIf="cliente">
-    <!-- Seção: Dados Pessoais -->
-    <h3 class="subtitulo">Dados Pessoais</h3>
-
+  <div class="com-cor-diferente">
+        <mat-card-title>Informações Pessoais</mat-card-title>
+  </div>
+  <form>
+    <div class="form-grid"> 
     <mat-form-field appearance="outline">
       <mat-label>Nome</mat-label>
       <mat-icon matPrefix>person</mat-icon>
@@ -17,9 +20,20 @@
       <input matInput [value]="cliente.cliCpf" name="cliCpf" disabled>
     </mat-form-field>
 
-    <!-- Seção: Endereço -->
-    <h3 class="subtitulo">Endereço</h3>
-
+    <mat-form-field appearance="outline">
+      <mat-label>Status</mat-label>
+      <mat-icon matPrefix>badge</mat-icon>
+      <input matInput [value]="cliente.cliStatus" name="cliStatus" disabled>
+    </mat-form-field>
+    </div>
+  </form>
+  
+   <!-- Seção: Endereço -->
+  <div class="com-cor-diferente">
+    <mat-card-title>Endereco</mat-card-title>
+  </div>
+  <form>
+    <div class="form-grid">
     <mat-form-field appearance="outline">
       <mat-label>Rua</mat-label>
       <mat-icon matPrefix>home</mat-icon>
@@ -49,10 +63,11 @@
       <mat-icon matPrefix>map</mat-icon>
       <input matInput [value]="cliente.endEstado" name="endEstado" disabled>
     </mat-form-field>
-
+    </div>
+  </form>
     <!-- Seção: Contato -->
     <h3 class="subtitulo">Contato</h3>
-
+  <form>
     <mat-form-field appearance="outline">
       <mat-label>Celular</mat-label>
       <mat-icon matPrefix>smartphone</mat-icon>
@@ -70,7 +85,7 @@
       <mat-icon matPrefix>email</mat-icon>
       <input matInput [value]="cliente.conEmail" name="conEmail" disabled>
     </mat-form-field>
-
+  </form>
     <!-- Botões -->
     <div class="botoes">
       <button mat-raised-button color="warn" class="btnExcl" (click)="deleteCliente()">
@@ -83,5 +98,4 @@
         Cancelar
       </button>
     </div>
-  </form>
 </mat-card>
