@@ -1,17 +1,17 @@
 export interface Product {
-    proId?: number; // ID do produto (opcional, equivalente a Long)
-    proNome: string; // Nome do produto
-    proDescricao?: string; // Descrição do produto (opcional)
-    proPrecoCusto: number | null; // Preço de custo do produto (BigDecimal mapeado como number)
-    proPrecoVenda: number | null; // Preço de venda do produto (BigDecimal mapeado como number)
-    proQuantidadeEstoque: number | null; // Quantidade em estoque
-    proCategoria?: string; // Categoria do produto (opcional)
-    proCodigoBarras?: string; // Código de barras do produto (opcional)
-    proMarca?: string; // Marca do produto (opcional)
-    proUnidadeMedida?: string; // Unidade de medida do produto (opcional)
-    proAtivo: boolean; // Status ativo do produto
-    proDataCadastro?: string; // Data de cadastro (LocalDateTime mapeado como string)
-    proDataAtualizacao?: string; // Data de atualização (LocalDateTime mapeado como string)
+    proId?: number
+    proNome: string
+    proPrecoCusto: number | null
+    proPrecoVenda: number | null
+    proMarca: string
+    proEstoque: number | null
+    proDescricao: string
+    proCategoria: string
+    proCodigoBarras: string
+    proDataCadastro: string | null
+    proDataAtualizacao: string | null
+    proAtivo: string
+    proFreteGratis: string
 
     // Objeto fornecedor que pelo menos deve ter o ID (forId)
     fornecedor: {

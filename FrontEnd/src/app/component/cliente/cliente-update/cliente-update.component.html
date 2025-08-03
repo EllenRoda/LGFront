@@ -1,9 +1,13 @@
-<mat-card>
-    <mat-card-title class="titulo">Alterar Cliente</mat-card-title>
-    <!-- Formulário para entrada de dados do cliente -->
-    <form *ngIf="cliente" class="formulario">
-        <h3 class="subtitulo">Dados Pessoais</h3>
+<mat-card class="fundo1">
+    <div class="cor-normal">
+        <mat-card-title class="titulo">Editar o Cliente</mat-card-title>
+    </div>
 
+    <div class="com-cor-diferente">
+        <mat-card-title>Informações Pessoais</mat-card-title>
+    </div>
+    <form>
+        <div class="form-grid">
         <mat-form-field appearance="outline">
             <mat-label>Nome</mat-label>
             <mat-icon matPrefix>person</mat-icon>
@@ -16,9 +20,20 @@
             <input matInput [(ngModel)]="cliente.cliCpf" name="cliCpf">
         </mat-form-field>
 
-        <!-- Seção: Endereço -->
-        <h3 class="subtitulo">Endereço</h3>
+        <mat-form-field appearance="outline">
+            <mat-label>Status</mat-label>
+            <mat-icon matPrefix>badge</mat-icon>
+            <input matInput [(ngModel)]="cliente.cliStatus" name="cliStatus">
+        </mat-form-field>
+        </div>
+    </form>    
 
+      <!-- Seção: Endereço -->
+    <div class="com-cor-diferente">
+        <mat-card-title>Endereco</mat-card-title>
+    </div>
+    <form>
+        <div class="form-grid">
         <mat-form-field appearance="outline">
             <mat-label>Rua</mat-label>
             <mat-icon matPrefix>home</mat-icon>
@@ -38,20 +53,31 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
+            <mat-label>Bairro</mat-label>
+            <mat-icon matPrefix>map</mat-icon>
+            <input matInput [(ngModel)]="cliente.endBairro" name="endBairro">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
             <mat-label>CEP</mat-label>
             <mat-icon matPrefix>markunread_mailbox</mat-icon>
             <input matInput [(ngModel)]="cliente.endCep" name="endCep">
         </mat-form-field>
 
-        <mat-form-field appearance="outline" class="campo full-width">
+        <mat-form-field appearance="outline">
             <mat-label>Estado</mat-label>
             <mat-icon matPrefix>map</mat-icon>
             <input matInput [(ngModel)]="cliente.endEstado" name="endEstado">
         </mat-form-field>
+        </div>
+    </form>    
 
-        <!-- Seção: Contato -->
-        <h3 class="subtitulo">Contato</h3>
-
+      <!-- Seção: Contato -->
+    <div class="com-cor-diferente">
+        <mat-card-title>Contato</mat-card-title>
+    </div>
+    <form>
+        <div class="form-grid">
         <mat-form-field appearance="outline">
             <mat-label>Celular</mat-label>
             <mat-icon matPrefix>smartphone</mat-icon>
@@ -69,6 +95,7 @@
             <mat-icon matPrefix>email</mat-icon>
             <input matInput [(ngModel)]="cliente.conEmail" name="conEmail">
         </mat-form-field>
+        </div>
     </form>
     <div class="botoes">
         <button class="btnSave" (click)="updateCliente()" color="primary">

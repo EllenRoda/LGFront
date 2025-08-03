@@ -2,7 +2,7 @@
 .header {
     display: flex; /* Layout flexível */
     align-items: center; /* Alinhamento vertical */
-    background-color: #000000; /* Fundo */
+    background: linear-gradient(to bottom, #000000, #a70101, #000000); /* Fundo */
     position: fixed; /* Fixa o cabeçalho na tela */
     top: 0; /* Alinha ao topo */
     left: 0; /* Alinha à esquerda */
@@ -21,13 +21,13 @@
 
 /* Estilo do logo no cabeçalho */
 .header .logo {
-    max-height: 100px; /* Define altura máxima do logo */
+    max-height: 150px; /* Define altura máxima do logo */
 }
 
 /* Estilo do grupo de título no cabeçalho */
 .header .title-group {
     padding-left: 25px; /* Espaçamento à esquerda */
-    color: rgb(132, 0, 255); /* Cor do texto */
+    color: rgb(255, 255, 255); /* Cor do texto */
 }
 
 /* Estilo do ícone dentro do grupo de título */

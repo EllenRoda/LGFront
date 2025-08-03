@@ -36,12 +36,6 @@
   <form>
     <div class="form-grid">
     <mat-form-field appearance="outline">
-      <mat-label>CEP</mat-label>
-      <mat-icon matPrefix>markunread_mailbox</mat-icon>
-      <input matInput [(ngModel)]="cliente.endCep" name="endCep">
-    </mat-form-field>
-
-    <mat-form-field appearance="outline">
       <mat-label>Rua</mat-label>
       <mat-icon matPrefix>home</mat-icon>
       <input matInput [(ngModel)]="cliente.endRua" name="endRua">
@@ -60,18 +54,25 @@
     </mat-form-field>
 
     <mat-form-field appearance="outline">
-      <mat-label>Estado</mat-label>
-      <mat-icon matPrefix>map</mat-icon>
-      <input matInput [(ngModel)]="cliente.endEstado" name="endEstado">
-    </mat-form-field>
-
-    <mat-form-field appearance="outline">
       <mat-label>Bairro</mat-label>
       <mat-icon matPrefix>map</mat-icon>
       <input matInput [(ngModel)]="cliente.endBairro" name="endBairro">
     </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>CEP</mat-label>
+      <mat-icon matPrefix>markunread_mailbox</mat-icon>
+      <input matInput [(ngModel)]="cliente.endCep" name="endCep">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Estado</mat-label>
+      <mat-icon matPrefix>map</mat-icon>
+      <input matInput [(ngModel)]="cliente.endEstado" name="endEstado">
+    </mat-form-field>
     </div>
   </form>
+  
     <!-- Seção: Contato -->
   <div class="com-cor-diferente">
     <mat-card-title>Contato</mat-card-title>

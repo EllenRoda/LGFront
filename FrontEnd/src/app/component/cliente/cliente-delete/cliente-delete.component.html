@@ -58,16 +58,23 @@
       <input matInput [value]="cliente.endCep" name="endCep" disabled>
     </mat-form-field>
 
-    <mat-form-field appearance="outline" class="campo full-width">
+    <mat-form-field appearance="outline">
       <mat-label>Estado</mat-label>
       <mat-icon matPrefix>map</mat-icon>
       <input matInput [value]="cliente.endEstado" name="endEstado" disabled>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Bairro</mat-label>
+      <mat-icon matPrefix>map</mat-icon>
+      <input matInput [value]="cliente.endBairro" name="endBairro" disabled>
     </mat-form-field>
     </div>
   </form>
     <!-- Seção: Contato -->
     <h3 class="subtitulo">Contato</h3>
   <form>
+    <div class="form-grid">
     <mat-form-field appearance="outline">
       <mat-label>Celular</mat-label>
       <mat-icon matPrefix>smartphone</mat-icon>
@@ -85,6 +92,7 @@
       <mat-icon matPrefix>email</mat-icon>
       <input matInput [value]="cliente.conEmail" name="conEmail" disabled>
     </mat-form-field>
+    </div>
   </form>
     <!-- Botões -->
     <div class="botoes">

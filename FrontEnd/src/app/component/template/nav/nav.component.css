@@ -1,6 +1,6 @@
 /* Estilo da barra lateral */
 .sidenav {
-    background-color: #0e0230; /* Fundo azul escuro */
+    background-color: #000000; /* Fundo azul escuro */
     width: 200px; /* Largura fixa */
 }
 
@@ -17,7 +17,7 @@
 /* Estilo do conteúdo principal */
 .content {
     padding: 17px; /* Espaçamento interno */
-    background-color: #13141f; /* Fundo branco */
+    background-color: #3d0000; /* Fundo branco */
 }
 
 /* Cor padrão dos ícones */
@@ -26,7 +26,7 @@
 }
 /* Efeito de brilho ao passar o mouse */
 .sidenav a:hover {
-    background-color: #140342; /* Leve alteração na cor de fundo */
+    background-color: #fc140c; /* Leve alteração na cor de fundo */
     font-size: 16px; /* Define o tamanho da fonte do texto do botão */
     border-radius: 5px; /* Define bordas arredondadas */
     margin: 5px 0; /* Margem entre os links */
@@ -35,7 +35,24 @@
     width: 100%; /* Largura total */
     transition: all 0.3s ease; /* Suaviza as mudanças de estilo */
 }
+.sidenav a:hover i {
+    color: #000000; /* Azul escuro nos ícones no hover */
+}
 
 span{
-    color: #ffffff;
+  color: #ffffff;
+  font-family: 'Rockwell', Arial, sans-serif;
+  font-size: 20px;
+  transition: all 0.3s ease;
 }
+
+/*.anima {
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  width: 0;
+  transition: all 0.3s ease;
+  font-family: 'Rockwell', Arial, sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+}*/

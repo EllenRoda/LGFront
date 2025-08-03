@@ -13,17 +13,17 @@ import { Fornecedor } from '../../fornecedor/fornecedor.model';
 export class ProductUpdateComponent implements OnInit {
   product: Product = {
     proNome: '',
-    proDescricao: '',
     proPrecoCusto: null,
     proPrecoVenda: null,
-    proQuantidadeEstoque: null,
+    proMarca: '',
+    proEstoque: null,
+    proDescricao: '',
     proCategoria: '',
     proCodigoBarras: '',
-    proMarca: '',
-    proUnidadeMedida: '',
-    proAtivo: true,
     proDataCadastro: '',
     proDataAtualizacao: '',
+    proAtivo: '',
+    proFreteGratis: '',
     fornecedor: {
       forId: 0, // Inicializa com valor padrão
     }
