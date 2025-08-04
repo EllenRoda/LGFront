@@ -14,28 +14,9 @@
         <td mat-cell *matCellDef="let row">{{ row.forNomeFantasia }}</td>
       </ng-container>
 
-      <!-- CNPJ -->
-      <ng-container matColumnDef="forCnpj">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>CNPJ</th>
-        <td mat-cell *matCellDef="let row">{{ row.forCnpj }}</td>
-      </ng-container>
-
-      <!-- Razão Social -->
-      <ng-container matColumnDef="forRazaoSocial">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Razão Social</th>
-        <td mat-cell *matCellDef="let row">{{ row.forRazaoSocial }}</td>
-      </ng-container>
-
-      <!-- Rua -->
-      <ng-container matColumnDef="endRua">
-        <th mat-header-cell *matHeaderCellDef>Rua</th>
-        <td mat-cell *matCellDef="let row">{{ row.endRua }}</td>
-      </ng-container>
-
-      <!-- Número -->
-      <ng-container matColumnDef="endNumero">
-        <th mat-header-cell *matHeaderCellDef>Número</th>
-        <td mat-cell *matCellDef="let row">{{ row.endNumero }}</td>
+      <ng-container matColumnDef="forCpf">
+        <th mat-header-cell *matHeaderCellDef>CPF</th>
+        <td mat-cell *matCellDef="let row">{{ row.forCpf }}</td>
       </ng-container>
 
       <!-- Cidade -->
@@ -44,34 +25,21 @@
         <td mat-cell *matCellDef="let row">{{ row.endCidade }}</td>
       </ng-container>
 
-      <!-- CEP -->
-      <ng-container matColumnDef="endCep">
-        <th mat-header-cell *matHeaderCellDef>CEP</th>
-        <td mat-cell *matCellDef="let row">{{ row.endCep }}</td>
-      </ng-container>
-
-      <!-- Estado -->
-      <ng-container matColumnDef="endEstado">
-        <th mat-header-cell *matHeaderCellDef>Estado</th>
-        <td mat-cell *matCellDef="let row">{{ row.endEstado }}</td>
-      </ng-container>
-
       <!-- Celular -->
       <ng-container matColumnDef="conCelular">
         <th mat-header-cell *matHeaderCellDef>Celular</th>
         <td mat-cell *matCellDef="let row">{{ row.conCelular }}</td>
       </ng-container>
 
-      <!-- Telefone Comercial -->
-      <ng-container matColumnDef="conTelefoneComercial">
-        <th mat-header-cell *matHeaderCellDef>Telefone Comercial</th>
-        <td mat-cell *matCellDef="let row">{{ row.conTelefoneComercial }}</td>
-      </ng-container>
-
       <!-- Email -->
       <ng-container matColumnDef="conEmail">
         <th mat-header-cell *matHeaderCellDef>Email</th>
         <td mat-cell *matCellDef="let row">{{ row.conEmail }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="forStatus">
+        <th mat-header-cell *matHeaderCellDef>Status</th>
+        <td mat-cell *matCellDef="let row">{{ row.forStatus }}</td>
       </ng-container>
 
       <!-- Ações -->

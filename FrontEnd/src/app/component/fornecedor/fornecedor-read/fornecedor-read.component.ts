@@ -14,15 +14,12 @@ export class FornecedorReadComponent implements OnInit {
   displayedColumns: string[] = [
     'forId',
     'forNomeFantasia',
-    'forCnpj',
-    'forRazaoSocial',
-    'endRua',
-    'endNumero',
+    'forCpf',
+    'forStatus',
+    
     'endCidade',
-    'endCep',
-    'endEstado',
+    
     'conCelular',
-    'conTelefoneComercial',
     'conEmail',
     'action'
   ];

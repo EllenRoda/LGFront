@@ -1,19 +1,18 @@
-<mat-card>
-    <mat-card-title class="titulo">Excluir Fornecedor</mat-card-title>
-    <!-- Formulário para entrada de dados do fornecedor -->
-    <form *ngIf="fornecedor" class="formulario">
-        <h3 class="subtitulo">Dados Pessoais</h3>
+<mat-card class="fundo1">
+    <div class="cor-normal">
+        <mat-card-title class="titulo">Excluir Fornecedor</mat-card-title>
+    </div>
 
+    <div class="com-cor-diferente">
+        <mat-card-title>Informações Pessoais</mat-card-title>
+    </div>
+    
+    <form>
+        <div class="form-grid">
         <mat-form-field appearance="outline">
             <mat-label>Nome Fantasia</mat-label>
             <mat-icon matPrefix>person</mat-icon>
             <input matInput [(ngModel)]="fornecedor.forNomeFantasia" name="forNomeFantasia" disabled>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
-            <mat-label>CNPJ</mat-label>
-            <mat-icon matPrefix>badge</mat-icon>
-            <input matInput [(ngModel)]="fornecedor.forCnpj" name="forCnpj" disabled>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="campo full-width">
@@ -22,9 +21,38 @@
             <input matInput [(ngModel)]="fornecedor.forRazaoSocial" name="forRazaoSocial" disabled>
         </mat-form-field>
 
-        <!-- Seção: Endereço -->
-        <h3 class="subtitulo">Endereço</h3>
+        <mat-form-field appearance="outline">
+            <mat-label>CPF</mat-label>
+            <mat-icon matPrefix>badge</mat-icon>
+            <input matInput [(ngModel)]="fornecedor.forCpf" name="forCpf" disabled>
+        </mat-form-field>
 
+        <mat-form-field appearance="outline">
+            <mat-label>Data de Cadastro</mat-label>
+            <mat-icon matPrefix>calendar_today</mat-icon>
+            <input matInput [value]="(fornecedor.forDataCadastro | date:'dd/MM/yyyy')" disabled>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="campo full-width">
+            <mat-label>Responsavel</mat-label>
+            <mat-icon matPrefix>business</mat-icon>
+            <input matInput [(ngModel)]="fornecedor.forResponsavel" name="forResponsavel" disabled>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Status</mat-label>
+            <mat-icon matPrefix>badge</mat-icon>
+            <input matInput [value]="fornecedor.forStatus" name="forStatus" disabled>
+        </mat-form-field>
+        </div>
+    </form>
+
+      <!-- Seção: Endereço -->
+    <div class="com-cor-diferente">
+        <mat-card-title>Endereco</mat-card-title>
+    </div>
+    <form>
+        <div class="form-grid">
         <mat-form-field appearance="outline">
             <mat-label>Rua</mat-label>
             <mat-icon matPrefix>home</mat-icon>
@@ -44,6 +72,12 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
+            <mat-label>Bairro</mat-label>
+            <mat-icon matPrefix>location_city</mat-icon>
+            <input matInput [(ngModel)]="fornecedor.endBairro" name="endBairro" disabled>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
             <mat-label>CEP</mat-label>
             <mat-icon matPrefix>markunread_mailbox</mat-icon>
             <input matInput [(ngModel)]="fornecedor.endCep" name="endCep" disabled>
@@ -54,10 +88,14 @@
             <mat-icon matPrefix>map</mat-icon>
             <input matInput [(ngModel)]="fornecedor.endEstado" name="endEstado" disabled>
         </mat-form-field>
-
-        <!-- Seção: Contato -->
-        <h3 class="subtitulo">Contato</h3>
-
+        </div>
+    </form>
+      <!-- Seção: Contato -->
+    <div class="com-cor-diferente">
+        <mat-card-title>Contato</mat-card-title>
+    </div>
+    <form>
+        <div class="form-grid">
         <mat-form-field appearance="outline">
             <mat-label>Celular</mat-label>
             <mat-icon matPrefix>smartphone</mat-icon>
@@ -75,6 +113,7 @@
             <mat-icon matPrefix>email</mat-icon>
             <input matInput [(ngModel)]="fornecedor.conEmail" name="conEmail" disabled>
         </mat-form-field>
+        </div>
     </form>
     <div class="botoes">
     <button class="btnExcl" (click)="deleteFornecedor()" color="primary">

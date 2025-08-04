@@ -12,14 +12,20 @@ import { HttpClient } from '@angular/common/http';
 export class FornecedorCreateComponent implements OnInit {
 
   fornecedor: Fornecedor = {
-    forCnpj: '',
     forNomeFantasia: '',
     forRazaoSocial: '',
+    forCpf: '',
+    forStatus: '',
+    forDataCadastro: null,
+    forResponsavel: '',
+
     endRua: '',
     endNumero: '',
     endCep: '',
     endCidade: '',
     endEstado: '',
+    endBairro: '',
+    
     conCelular: '',
     conTelefoneComercial: '',
     conEmail: ''

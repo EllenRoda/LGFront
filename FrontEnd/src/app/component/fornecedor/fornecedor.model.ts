@@ -2,7 +2,10 @@ export interface Fornecedor {
   forId?: number;
   forNomeFantasia: string;
   forRazaoSocial: string;
-  forCnpj: string;
+  forCpf: string;
+  forStatus: string;
+  forDataCadastro: string | null
+  forResponsavel: string
 
   // Endereço
   endRua: string;
@@ -10,6 +13,7 @@ export interface Fornecedor {
   endCidade: string;
   endCep: string;
   endEstado: string;
+  endBairro: string
 
   // Contato
   conCelular: string;

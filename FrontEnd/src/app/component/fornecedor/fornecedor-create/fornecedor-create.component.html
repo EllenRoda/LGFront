@@ -1,20 +1,19 @@
-<mat-card>
-  <mat-card-title class="titulo">Novo Fornecedor</mat-card-title>
+<mat-card class="fundo1">
+  <div class="cor-normal">
+    <mat-card-title class="titulo">Novo Fornecedor</mat-card-title>
+  </div>
 
-  <form class="formulario" autocomplete="off">
+  <div class="com-cor-diferente">
+    <mat-card-title>Informações Pessoais</mat-card-title>
+  </div>
+
+  <form>
     <!-- Seção: Dados Pessoais -->
-    <h3 class="subtitulo">Dados Pessoais</h3>
-
+    <div class="form-grid">
     <mat-form-field appearance="outline" class="campo">
       <mat-label>Nome Fantasia</mat-label>
       <mat-icon matPrefix>person</mat-icon>
       <input matInput [(ngModel)]="fornecedor.forNomeFantasia" name="forNomeFantasia" required>
-    </mat-form-field>
-
-    <mat-form-field appearance="outline" class="campo">
-      <mat-label>CNPJ</mat-label>
-      <mat-icon matPrefix>badge</mat-icon>
-      <input matInput [(ngModel)]="fornecedor.forCnpj" name="forCnpj" required maxlength="18" placeholder="00.000.000/0000-00">
     </mat-form-field>
     
     <mat-form-field appearance="outline" class="campo full-width">
@@ -22,19 +21,43 @@
       <mat-icon matPrefix>business</mat-icon>
       <input matInput [(ngModel)]="fornecedor.forRazaoSocial" name="forRazaoSocial" required>
     </mat-form-field>
-    
-    <!-- Seção: Endereço -->
-    <h3 class="subtitulo">Endereço</h3>
-    <!-- CEP com evento (keyup) para buscar endereço automaticamente -->
-    <mat-form-field appearance="outline">
-      <mat-icon matPrefix>markunread_mailbox</mat-icon>
-      <input matInput placeholder="CEP" 
-      [(ngModel)]="fornecedor.endCep"
-       name="endCep" 
-       required
-        (keyup)="buscarEnderecoPorCep()">
+
+    <mat-form-field appearance="outline" class="campo">
+      <mat-label>CPF</mat-label>
+      <mat-icon matPrefix>badge</mat-icon>
+      <input matInput [(ngModel)]="fornecedor.forCpf" name="forCpf" required maxlength="18" placeholder="00.000.000/0000-00">
     </mat-form-field>
 
+    <mat-form-field appearance="outline">
+        <mat-label>Data de Cadastro</mat-label>
+        <mat-icon matPrefix>calendar_today</mat-icon>
+        <input matInput [matDatepicker]="picker1" placeholder="Data de Cadastro" [(ngModel)]="fornecedor.forDataCadastro" name="forDataCadastro" required>
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+
+    <mat-form-field appearance="outline" class="campo">
+      <mat-label>Responsavel</mat-label>
+      <mat-icon matPrefix>badge</mat-icon>
+      <input matInput [(ngModel)]="fornecedor.forResponsavel" name="forResponsavel" required maxlength="18" placeholder="00.000.000/0000-00">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Status</mat-label>
+        <mat-icon matPrefix>check_circle</mat-icon>
+        <mat-select [(ngModel)]="fornecedor.forStatus" name="forStatus">
+          <mat-option value="Ativo">Ativo</mat-option>
+          <mat-option value="Inativo">Inativo</mat-option>
+        </mat-select>
+    </mat-form-field>
+    </div>
+  </form>  
+    
+  <div class="com-cor-diferente">
+    <mat-card-title>Endereco</mat-card-title>
+  </div>
+  <form>
+    <div class="form-grid">
     <mat-form-field appearance="outline" class="campo">
       <mat-label>Rua</mat-label>
       <mat-icon matPrefix>home</mat-icon>
@@ -53,16 +76,32 @@
       <input matInput [(ngModel)]="fornecedor.endCidade" name="endCidade" required>
     </mat-form-field>
 
+    <mat-form-field appearance="outline" class="campo">
+      <mat-label>Bairro</mat-label>
+      <mat-icon matPrefix>location_city</mat-icon>
+      <input matInput [(ngModel)]="fornecedor.endBairro" name="endBairro" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>CEP</mat-label>
+      <mat-icon matPrefix>markunread_mailbox</mat-icon>
+      <input matInput [(ngModel)]="fornecedor.endCep" name="endCep">
+    </mat-form-field>
 
     <mat-form-field appearance="outline" class="campo full-width">
       <mat-label>Estado</mat-label>
       <mat-icon matPrefix>map</mat-icon>
       <input matInput [(ngModel)]="fornecedor.endEstado" name="endEstado" required maxlength="2" placeholder="UF">
     </mat-form-field>
+    </div>
+  </form>  
 
     <!-- Seção: Contato -->
-    <h3 class="subtitulo">Contato</h3>
-
+  <div class="com-cor-diferente">
+    <mat-card-title>Contato</mat-card-title>
+  </div>
+  <form>
+    <div class="form-grid">
     <mat-form-field appearance="outline" class="campo">
       <mat-label>Celular</mat-label>
       <mat-icon matPrefix>smartphone</mat-icon>
@@ -80,6 +119,7 @@
       <mat-icon matPrefix>email</mat-icon>
       <input matInput [(ngModel)]="fornecedor.conEmail" name="conEmail" required type="email">
     </mat-form-field>
+    </div>
 
     <!-- Botões -->
     <div class="botoes">

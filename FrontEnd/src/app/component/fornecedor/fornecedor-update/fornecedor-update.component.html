@@ -1,19 +1,18 @@
-<mat-card>
-    <mat-card-title class="titulo">Alterar Fornecedor</mat-card-title>
-    <!-- Formulário para entrada de dados do fornecedor -->
-    <form *ngIf="fornecedor" class="formulario">
-        <h3 class="subtitulo">Dados Pessoais</h3>
+<mat-card class="fundo1">
+    <div class="cor-normal">
+        <mat-card-title class="titulo">Editar o Fornecedor</mat-card-title>
+    </div>
 
+    <div class="com-cor-diferente">
+        <mat-card-title>Informações Pessoais</mat-card-title>
+    </div>
+    
+    <form>
+        <div class="form-grid">
         <mat-form-field appearance="outline">
             <mat-label>Nome Fantasia</mat-label>
             <mat-icon matPrefix>person</mat-icon>
             <input matInput [(ngModel)]="fornecedor.forNomeFantasia" name="forNomeFantasia">
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
-            <mat-label>CNPJ</mat-label>
-            <mat-icon matPrefix>badge</mat-icon>
-            <input matInput [(ngModel)]="fornecedor.forCnpj" name="forCnpj">
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="campo full-width">
@@ -21,6 +20,36 @@
             <mat-icon matPrefix>business</mat-icon>
             <input matInput [(ngModel)]="fornecedor.forRazaoSocial" name="forRazaoSocial">
         </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>CPF</mat-label>
+            <mat-icon matPrefix>badge</mat-icon>
+            <input matInput [(ngModel)]="fornecedor.forCpf" name="forCpf">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Data de Cadastro</mat-label>
+            <mat-icon matPrefix>calendar_today</mat-icon>
+            <input matInput [matDatepicker]="picker1" placeholder="Data de Cadastro" [(ngModel)]="fornecedor.forDataCadastro" name="forDataCadastro" required>
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="campo">
+            <mat-label>Responsavel</mat-label>
+            <mat-icon matPrefix>badge</mat-icon>
+            <input matInput [(ngModel)]="fornecedor.forResponsavel" name="forResponsavel" required maxlength="18" placeholder="00.000.000/0000-00">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Status</mat-label>
+            <mat-icon matPrefix>check_circle</mat-icon>
+            <mat-select [(ngModel)]="fornecedor.forStatus" name="forStatus">
+                <mat-option value="Ativo">Ativo</mat-option>
+                <mat-option value="Inativo">Inativo</mat-option>
+            </mat-select>
+        </mat-form-field>
+        </div>
 
         <!-- Seção: Endereço -->
         <h3 class="subtitulo">Endereço</h3>

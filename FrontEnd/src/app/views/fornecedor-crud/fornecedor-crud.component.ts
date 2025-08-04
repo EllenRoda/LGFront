@@ -35,7 +35,7 @@ export class FornecedorCrudComponent implements OnInit {
       this.filteredFornecedor = this.allFornecedor.filter(f =>
         f.forNomeFantasia.toLowerCase().includes(term) ||
         f.forRazaoSocial.toLowerCase().includes(term) ||
-        f.forCnpj.toLowerCase().includes(term)
+        f.forCpf.toLowerCase().includes(term)
       );
     }
 }
