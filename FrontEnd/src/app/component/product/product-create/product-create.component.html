@@ -1,12 +1,13 @@
-<mat-card>
+<mat-card class="fundo1">
+  <div class="cor-normal">
   <mat-card-title class="titulo">
     <mat-icon style="vertical-align: middle; margin-right: 6px;">add_box</mat-icon>
     Novo Produto
   </mat-card-title>
+  </div>
 
-  <div class="scrollable-form">
     <form>
-
+      <div class="form-grid">
       <!-- Nome do Produto -->
       <mat-form-field appearance="outline">
         <mat-label>Nome</mat-label>
@@ -26,45 +27,42 @@
       <mat-form-field appearance="outline">
         <mat-label>Preço de Venda</mat-label>
         <mat-icon matPrefix>price_check</mat-icon>
-        <input matInput type="number" placeholder="Preço de venda (R$)" [(ngModel)]="product.proPrecoVenda"
-          name="proPrecoVenda" step="0.01" min="0" required>
+        <input matInput type="number" placeholder="Preço de venda (R$)" [(ngModel)]="product.proPrecoVenda" name="proPrecoVenda" step="0.01" min="0" required>
       </mat-form-field>
 
       <!-- Quantidade em Estoque -->
       <mat-form-field appearance="outline">
         <mat-label>Estoque</mat-label>
         <mat-icon matPrefix>stacked_bar_chart</mat-icon>
-        <input matInput type="number" placeholder="Estoque" [(ngModel)]="product.proEstoque"
-          name="proEstoque" min="0" required>
+        <input matInput type="number" placeholder="Estoque" [(ngModel)]="product.proEstoque" name="proEstoque" min="0" required>
       </mat-form-field>
 
       <!-- Descrição -->
-      <mat-form-field appearance="outline" class="campo full-width">
+      <mat-form-field appearance="outline">
         <mat-label>Descrição</mat-label>
         <mat-icon matPrefix>description</mat-icon>
-        <textarea matInput placeholder="Descrição" [(ngModel)]="product.proDescricao" name="proDescricao" required></textarea>
+        <input matInput placeholder="Descrição" [(ngModel)]="product.proDescricao" name="proDescricao" required>
       </mat-form-field>
 
       <!-- Categoria -->
-      <mat-form-field appearance="outline" class="campo full-width">
+      <mat-form-field appearance="outline">
         <mat-label>Categoria</mat-label>
         <mat-icon matPrefix>description</mat-icon>
-        <textarea matInput placeholder="Categoria" [(ngModel)]="product.proCategoria" name="proCategoria" required></textarea>
+        <input matInput placeholder="Categoria" [(ngModel)]="product.proCategoria" name="proCategoria" required>
       </mat-form-field>
 
       <!-- Código de Barras -->
       <mat-form-field appearance="outline">
         <mat-label>Código de Barras</mat-label>
         <mat-icon matPrefix>qr_code_scanner</mat-icon>
-        <input matInput placeholder="Código de barras" [(ngModel)]="product.proCodigoBarras" name="proCodigoBarras"
-          required>
+        <input matInput placeholder="Código de barras" [(ngModel)]="product.proCodigoBarras" name="proCodigoBarras" required>
       </mat-form-field>
 
       <!-- Marca -->
-      <mat-form-field appearance="outline" class="campo full-width">
+      <mat-form-field appearance="outline">
         <mat-label>Marca</mat-label>
         <mat-icon matPrefix>description</mat-icon>
-        <textarea matInput placeholder="Marca" [(ngModel)]="product.proMarca" name="proMarca" required></textarea>
+        <input matInput placeholder="Marca" [(ngModel)]="product.proMarca" name="proMarca" required>
       </mat-form-field>
 
       <!-- Produto Ativo -->
@@ -77,14 +75,12 @@
         </mat-select>
       </mat-form-field>
 
-      <!-- Fornecedor -->
-      <mat-form-field appearance="outline" class="full-width custom-select">
-        <mat-label>Fornecedor</mat-label>
-        <mat-icon matPrefix>store</mat-icon>
-        <mat-select [(ngModel)]="product.fornecedor" name="fornecedor" required>
-          <mat-option *ngFor="let fornecedor of fornecedores" [value]="{ forId: fornecedor.forId }">
-            {{ fornecedor.forNomeFantasia }}
-          </mat-option>
+      <mat-form-field appearance="outline">
+        <mat-label>Frete Gratis?</mat-label>
+        <mat-icon matPrefix>check_circle</mat-icon>
+        <mat-select [(ngModel)]="product.proFreteGratis" name="proFreteGratis">
+          <mat-option value="Sim">Sim</mat-option>
+          <mat-option value="Não">Não</mat-option>
         </mat-select>
       </mat-form-field>
 
@@ -107,19 +103,30 @@
         <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
         <mat-datepicker #picker2></mat-datepicker>
       </mat-form-field>
+      </div>
+
+      <div class="forne">
+      <!-- Fornecedor -->
+      <mat-form-field appearance="outline" class="full-width custom-select">
+        <mat-label>Fornecedor</mat-label>
+        <mat-icon matPrefix>store</mat-icon>
+        <mat-select [(ngModel)]="product.fornecedor" name="fornecedor" required>
+          <mat-option *ngFor="let fornecedor of fornecedores" [value]="{ forId: fornecedor.forId }">
+            {{ fornecedor.forNomeFantasia }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      </div>
 
       <!-- Botões -->
       <div class="botoes">
         <button class="btnSave" (click)="createProduct()" color="primary">
-          <mat-icon style="vertical-align: middle; margin-right: 4px;">save</mat-icon>
           Salvar
         </button>
 
         <button class="btnCancel" (click)="cancel()">
-          <mat-icon style="vertical-align: middle; margin-right: 4px;">cancel</mat-icon>
           Cancelar
         </button>
       </div>
     </form>
-  </div>
 </mat-card>

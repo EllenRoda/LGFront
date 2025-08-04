@@ -6,31 +6,37 @@
             <th mat-header-cell *matHeaderCellDef>Nome</th>
             <td mat-cell *matCellDef="let row">{{row.proNome}}</td>
         </ng-container>
+
+        <ng-container matColumnDef="proPrecoCusto">
+            <th mat-header-cell *matHeaderCellDef>Preço de Custo</th>
+            <td mat-cell *matCellDef="let row">{{"R$ "+row.proPrecoCusto}}</td>
+        </ng-container>
         
         <ng-container matColumnDef="proPrecoVenda">
             <th mat-header-cell *matHeaderCellDef>Preço de Venda</th>
             <td mat-cell *matCellDef="let row">{{"R$ "+row.proPrecoVenda}}</td>
         </ng-container>
-        <ng-container matColumnDef="proQuantidadeEstoque">
-            <th mat-header-cell *matHeaderCellDef>Quantidade em Estoque</th>
-            <td mat-cell *matCellDef="let row">{{row.proQuantidadeEstoque}}</td>
-        </ng-container>      
-        <ng-container matColumnDef="proCodigoBarras">
-            <th mat-header-cell *matHeaderCellDef>Código de Barras</th>
-            <td mat-cell *matCellDef="let row">{{row.proCodigoBarras}}</td>
+
+        <ng-container matColumnDef="proEstoque">
+            <th mat-header-cell *matHeaderCellDef>Estoque</th>
+            <td mat-cell *matCellDef="let row">{{row.proEstoque}}</td>
         </ng-container>
-        <ng-container matColumnDef="proMarca">
-            <th mat-header-cell *matHeaderCellDef>Marca</th>
-            <td mat-cell *matCellDef="let row">{{row.proMarca}}</td>
+
+        <ng-container matColumnDef="proCategoria">
+            <th mat-header-cell *matHeaderCellDef>Categoria</th>
+            <td mat-cell *matCellDef="let row">{{row.proCategoria}}</td>
         </ng-container>
+
         <ng-container matColumnDef="proAtivo">
             <th mat-header-cell *matHeaderCellDef>Status</th>
             <td mat-cell *matCellDef="let row">{{row.proAtivo}}</td>
         </ng-container>
+
         <ng-container matColumnDef="forNomeFantasia">
             <th mat-header-cell *matHeaderCellDef>Fornecedor</th>
             <td mat-cell *matCellDef="let row">{{ row.fornecedor?.forNomeFantasia || 'Sem fornecedor' }}</td>
         </ng-container>
+        
         <ng-container matColumnDef="actions">
             <th mat-header-cell *matHeaderCellDef>Ações</th>
             <td mat-cell *matCellDef="let row">

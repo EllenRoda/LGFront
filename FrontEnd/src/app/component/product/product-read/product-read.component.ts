@@ -10,14 +10,12 @@ import { ProductService } from '../product.service';
 export class ProductReadComponent implements OnInit {
   @Input()
   products!: Product[]; // Lista de produtos
-  displayedColumns = ['proNome',
-    //'proPrecoCusto',
+  displayedColumns = [
+    'proNome',
+    'proPrecoCusto',
     'proPrecoVenda',
-    'proQuantidadeEstoque',
-    //'proCategoria',
-    //'proUnidadeMedida',
-    'proCodigoBarras',
-    'proMarca', 
+    'proEstoque',
+    'proCategoria', 
     'proAtivo', 
     'forNomeFantasia', 
     'actions'];
