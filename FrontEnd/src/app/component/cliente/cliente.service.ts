@@ -99,4 +99,15 @@ export class ClienteContatoService {
     const url = `${this.enderecoBaseUrl}/${id}`;
     return this.http.delete<Endereco>(url);
   }
+
+  // Total de Cliente
+  private _clienteCount = 0;
+
+  setClienteCount(count: number) {
+  this._clienteCount = count;
+  }
+
+  getClienteCount(): number {
+  return this._clienteCount;
+  }
 }

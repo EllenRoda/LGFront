@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ClienteContatoService } from 'src/app/component/cliente/cliente.service';
+import { FornecedorService } from 'src/app/component/fornecedor/fornecedor.service';
 import { ProductService } from 'src/app/component/product/product.service';
-import { VendaService } from 'src/app/component/venda/venda.service';
 
 @Component({
   selector: 'app-home', // Define o seletor do componente
@@ -8,29 +9,22 @@ import { VendaService } from 'src/app/component/venda/venda.service';
   styleUrls: ['./home.component.css'] // Caminho para o arquivo de estilos CSS
 })
 export class HomeComponent implements OnInit {
-  constructor(public productService: ProductService,
-    public vendaService: VendaService) { }
+  constructor(public productService: ProductService, public clienteService: ClienteContatoService, public fornecedorService: FornecedorService) { }
   productCount: number = 0;
-  vendaCount: number = 0;
-  estoqueBaixo: number = 0;
+  fornecedorCount: number = 0;
+  clienteCount: number = 0;
 
   ngOnInit(): void {
-    this.productService.read().subscribe(products => {
+    /*this.productService.read().subscribe(products => {
       this.productCount = products.length;
     });
 
-  this.productService.getContagemEstoqueBaixo().subscribe({
-      next: (count) => {
-        this.estoqueBaixo = count;
-      },
-      error: (err) => {
-        console.error('Erro ao buscar contagem de estoque baixo:', err);
-        this.productService.showMessage('Erro ao carregar contagem de estoque baixo');
-      }
-    });
+    this.fornecedorService.read().subscribe(fornecedores => {
+      this.fornecedorCount = fornecedores.length;
+      });
 
-    this.vendaService.read().subscribe(vendas => {
-      this.vendaCount = vendas.length;
-    });
+      this.clienteService.read().subscribe(clientes => {
+      this.clienteCount = clientes.length;
+      });*/
   }
 }

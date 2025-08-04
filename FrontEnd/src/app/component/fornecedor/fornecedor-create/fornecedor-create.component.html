@@ -12,25 +12,21 @@
     <div class="form-grid">
     <mat-form-field appearance="outline" class="campo">
       <mat-label>Nome Fantasia</mat-label>
-      <mat-icon matPrefix>person</mat-icon>
       <input matInput [(ngModel)]="fornecedor.forNomeFantasia" name="forNomeFantasia" required>
     </mat-form-field>
     
     <mat-form-field appearance="outline" class="campo full-width">
       <mat-label>Razão Social</mat-label>
-      <mat-icon matPrefix>business</mat-icon>
       <input matInput [(ngModel)]="fornecedor.forRazaoSocial" name="forRazaoSocial" required>
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="campo">
       <mat-label>CPF</mat-label>
-      <mat-icon matPrefix>badge</mat-icon>
       <input matInput [(ngModel)]="fornecedor.forCpf" name="forCpf" required maxlength="18" placeholder="00.000.000/0000-00">
     </mat-form-field>
 
     <mat-form-field appearance="outline">
         <mat-label>Data de Cadastro</mat-label>
-        <mat-icon matPrefix>calendar_today</mat-icon>
         <input matInput [matDatepicker]="picker1" placeholder="Data de Cadastro" [(ngModel)]="fornecedor.forDataCadastro" name="forDataCadastro" required>
         <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
         <mat-datepicker #picker1></mat-datepicker>
@@ -38,13 +34,11 @@
 
     <mat-form-field appearance="outline" class="campo">
       <mat-label>Responsavel</mat-label>
-      <mat-icon matPrefix>badge</mat-icon>
       <input matInput [(ngModel)]="fornecedor.forResponsavel" name="forResponsavel" required>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
         <mat-label>Status</mat-label>
-        <mat-icon matPrefix>check_circle</mat-icon>
         <mat-select [(ngModel)]="fornecedor.forStatus" name="forStatus">
           <mat-option value="Ativo">Ativo</mat-option>
           <mat-option value="Inativo">Inativo</mat-option>
@@ -60,37 +54,31 @@
     <div class="form-grid">
     <mat-form-field appearance="outline" class="campo">
       <mat-label>Rua</mat-label>
-      <mat-icon matPrefix>home</mat-icon>
       <input matInput [(ngModel)]="fornecedor.endRua" name="endRua" required>
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="campo">
       <mat-label>Número</mat-label>
-      <mat-icon matPrefix>pin</mat-icon>
       <input matInput [(ngModel)]="fornecedor.endNumero" name="endNumero" required>
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="campo">
       <mat-label>Cidade</mat-label>
-      <mat-icon matPrefix>location_city</mat-icon>
       <input matInput [(ngModel)]="fornecedor.endCidade" name="endCidade" required>
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="campo">
       <mat-label>Bairro</mat-label>
-      <mat-icon matPrefix>location_city</mat-icon>
       <input matInput [(ngModel)]="fornecedor.endBairro" name="endBairro" required>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>CEP</mat-label>
-      <mat-icon matPrefix>markunread_mailbox</mat-icon>
       <input matInput [(ngModel)]="fornecedor.endCep" name="endCep">
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="campo full-width">
       <mat-label>Estado</mat-label>
-      <mat-icon matPrefix>map</mat-icon>
       <input matInput [(ngModel)]="fornecedor.endEstado" name="endEstado" required maxlength="2" placeholder="UF">
     </mat-form-field>
     </div>
@@ -104,19 +92,16 @@
     <div class="form-grid">
     <mat-form-field appearance="outline" class="campo">
       <mat-label>Celular</mat-label>
-      <mat-icon matPrefix>smartphone</mat-icon>
       <input matInput [(ngModel)]="fornecedor.conCelular" name="conCelular" required maxlength="15" placeholder="(00) 00000-0000">
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="campo">
       <mat-label>Telefone Comercial</mat-label>
-      <mat-icon matPrefix>phone</mat-icon>
       <input matInput [(ngModel)]="fornecedor.conTelefoneComercial" name="conTelefoneComercial" maxlength="14" placeholder="(00) 0000-0000">
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="campo full-width">
       <mat-label>E-mail</mat-label>
-      <mat-icon matPrefix>email</mat-icon>
       <input matInput [(ngModel)]="fornecedor.conEmail" name="conEmail" required type="email">
     </mat-form-field>
     </div>

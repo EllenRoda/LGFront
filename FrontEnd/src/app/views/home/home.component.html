@@ -1,29 +1,69 @@
-<div class="conteiner">
-  <main class="main-conteiner">
-    <section class="cards">
-      <div class="card">
-        <h3><span>💰</span> Vendas do Dia</h3>
-        <p>R$ 1.250,00</p>
-      </div>
-      <a class="card" mat-list-item routerLink="/products">
+<mat-card class="home mat-elevation-z3">
+<body>
+<span>
+<mat-card-title class="title">Bem-vindo o Zero Mega X <span>🕹️ 🎮 💻</span></mat-card-title>  
+      
+      <div class="form-grid">
+        <!-- Produto -->
+      <div class="Produto">
+      <a class="cardP" mat-list-item routerLink="/products">
         <div>
-          <h3><span>📦</span> Produtos Cadastrados: <p>{{ productCount }}</p></h3>
+          <h3><span>📦</span> Total de Produtos: <p>{{ productCount }}</p></h3>
+      </div>
+      </a>
+      </div>
+
+        <!-- Cliente -->
+      <div class="Cliente">
+      <a class="cardC" mat-list-item routerLink="/clientes">
+        <div>
+          <h3><span>📦</span> Total de Clientes: <p>{{ clienteCount }}</p></h3>
+      </div>
+      </a>
+      </div>
+
+        <!-- Fornecedor -->
+      <div class="Fornecedor">
+      <a class="cardF" mat-list-item routerLink="/fornecedores">
+        <div>
+          <h3><span>📦</span> Total de Fornecedores: <p>{{ fornecedorCount }}</p></h3>
         </div>
       </a>
-      <div class="card">
-        <h3><span>👥</span> Clientes Atendidos</h3>
-        <p>{{ vendaCount }}</p>
       </div>
-      <a class="card warning" mat-list-item routerLink="/estoque-baixo">
-        <div>
-          <h3><span>⚠️</span> Estoque Baixo: <p>{{ estoqueBaixo }} produto{{ estoqueBaixo === 1 ? '' : 's' }}</p></h3>
+
+      </div>
+
+      <div class="form-grid1">
+        <mat-card-subtitle class="subtitle">
+          O presente projeto (Zero Mega X) de estágio tem como objetivo o desenvolvimento
+          de um sistema para uma loja de gamer, visando oferecer uma solução eficiente e
+          prática para o gerenciamento de produtos, clientes e vendas no segmento gamer. O
+          sistema proposto busca atender tanto a organização interna da loja quanto
+          proporcionar uma melhor experiência para os clientes, tornando os processos mais
+          ágeis e seguros.
+        </mat-card-subtitle>
+    
+        <mat-card-subtitle class="subtitle">
+          A proposta do sistema consiste em criar uma plataforma onde seja possível
+          cadastrar, editar, consultar e excluir informações de produtos, como jogos, consoles,
+          acessórios e itens colecionáveis, além de gerenciar dados de clientes, seus
+          respectivos contatos e endereços.
+        </mat-card-subtitle>
+    
+        <mat-card-subtitle class="subtitle">
+          Para embasar o desenvolvimento deste projeto, são utilizados conceitos de
+          programação orientada a objetos, modelagem de banco de dados e princípios de
+          desenvolvimento web, além de práticas de boas regras de negócio aplicadas ao
+          contexto comercial.
+        </mat-card-subtitle>
+    
+        <mat-card-subtitle class="subtitle">
+          O projeto contempla também um cronograma de execução com etapas bem
+          definidas, além da definição dos recursos necessários, tanto de hardware quanto de
+          software, que viabilizam o desenvolvimento e a implementação do sistema de gestão
+          da loja de gamer.
+        </mat-card-subtitle>
         </div>
-      </a>
-    </section>
-    <section class="charts">
-      <div class="chart">
-        <app-grafico-vendas></app-grafico-vendas>
-      </div>
-    </section>
-  </main>
-</div>
+</span>
+</body>
+</mat-card>

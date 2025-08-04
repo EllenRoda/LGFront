@@ -1,99 +1,99 @@
 /* Fundo do container */
 .mat-elevation-z4 {
-    background: linear-gradient(to bottom right, #2a003f, #1a1a1a); /* Gradiente escuro */
-    border-radius: 12px; /* Bordas arredondadas */
-    padding: 20px; /* Espaçamento interno */
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6); /* Sombra para destacar o container */
+    padding: 20px;
 }
 
 /* Estilo geral da tabela */
 table {
-    width: 100%; /* Largura total */
-    border-collapse: separate; /* Mantém bordas separadas */
-    border-spacing: 0; /* Remove espaçamento entre células */
-    overflow: hidden; /* Oculta conteúdo que ultrapassa os limites */
-    border-radius: 12px; /* Bordas arredondadas */
-    background-color: #1e1e1e; /* Fundo escuro */
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: rgb(0, 0, 0);
+    font-family: 'Rockwell', Arial, sans-serif;
+    font-size: 20px;
 }
 
-/* Cabeçalho da tabela */
+/* Cabeçalho */
 th {
-    background-color: #2c2c2c; /* Fundo do cabeçalho */
-    color: #f1f1f1; /* Cor do texto */
-    font-weight: bold; /* Texto em negrito */
-    padding: 16px; /* Espaçamento interno */
-    text-transform: uppercase; /* Texto em maiúsculas */
-    letter-spacing: 0.5px; /* Espaçamento entre letras */
+    background-color: #920404;
+    color: #f1f1f1;
+    font-weight: bold;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Rockwell', Arial, sans-serif;
 }
 
-/* Células da tabela */
+/* Células */
 td {
-    padding: 14px 16px; /* Espaçamento interno */
-    color: #e0e0e0; /* Cor do texto */
-    border-bottom: 1px solid #383838; /* Linha divisória entre células */
+    padding: 14px 16px;
+    color: #e0e0e0;
+    border-bottom: 1px solid #383838;
 }
 
-/* Efeito ao passar o mouse sobre uma linha */
+/* Linha ao passar o mouse */
 tr:hover {
-    background-color: #292929; /* Fundo mais claro */
-    transition:  0.3s ease; /* Transição suave */
+    background-color: #292929;
+    transition: background 0.3s ease;
 }
 
-/* Ícones de ação (editar e deletar) */
+/* Ícones de ação */
 .edit > i,
 .delete > i {
-    cursor: pointer; /* Cursor de clique */
-    transition: transform 0.2s ease, opacity 0.2s ease; /* Transições suaves */
-    font-size: 20px; /* Tamanho do ícone */
-    vertical-align: middle; /* Alinhamento vertical */
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    font-size: 20px;
+    vertical-align: middle;
 }
 
-/* Ícone de edição */
+/* Ícone editar */
 .edit > i {
-    color: #00e676; /* Cor verde neon */
+    color: #00e676; /* Verde neon */
 }
 
-/* Ícone de exclusão */
+/* Ícone deletar */
 .delete > i {
-    color: #ff5252; /* Cor vermelha neon */
+    color: #ff5252; /* Vermelho neon */
 }
 
 /* Efeitos ao passar o mouse nos ícones */
 .edit > i:hover,
 .delete > i:hover {
-    opacity: 0.8; /* Reduz opacidade */
-    transform: scale(1.15); /* Aumenta o tamanho */
+    opacity: 0.8;
+    transform: scale(1.15);
 }
 
 /* Estilização da barra de rolagem */
 .scrollable-form {
     max-height: 500px; /* Altura máxima para ativar a rolagem */
-    overflow-y: auto; /* Ativa a rolagem vertical */
+    overflow-y: auto; /* Ativa a barra de rolagem vertical */
     padding-right: 10px; /* Espaço para a barra de rolagem */
 }
 
-/* Barra de rolagem para navegadores WebKit (Chrome, Edge, Safari) */
+/* Estilização para navegadores WebKit (Chrome, Edge, Safari) */
 .scrollable-form::-webkit-scrollbar {
     width: 8px; /* Largura da barra de rolagem */
 }
 
 .scrollable-form::-webkit-scrollbar-track {
-    background: #2a003f; /* Fundo da trilha */
+    background: #2a003f; /* Cor de fundo da trilha, combinando com o gradiente do container */
     border-radius: 10px; /* Bordas arredondadas */
 }
 
 .scrollable-form::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, #00e676, #ff5252); /* Gradiente neon */
+    background: linear-gradient(45deg, #00e676, #ff5252); /* Gradiente neon com verde e vermelho */
     border-radius: 10px; /* Bordas arredondadas */
     box-shadow: 0 0 10px #00e676, 0 0 20px #ff5252; /* Efeito de brilho neon */
 }
 
 .scrollable-form::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(45deg, #00b358, #cc0000); /* Gradiente mais escuro ao passar o mouse */
+    background: linear-gradient(45deg, #00b358, #cc0000); /* Tons mais escuros ao passar o mouse */
     box-shadow: 0 0 15px #00b358, 0 0 25px #cc0000; /* Aumenta o brilho */
 }
 
-/* Barra de rolagem para Firefox */
+/* Estilização para Firefox */
 .scrollable-form {
     scrollbar-width: thin; /* Barra de rolagem fina */
     scrollbar-color: #a020f0 #2a003f; /* Cor da barra (thumb) e trilha (track) */

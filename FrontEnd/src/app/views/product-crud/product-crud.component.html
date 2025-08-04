@@ -1,15 +1,16 @@
-<mat-card>
-  <button mat-raised-button (click)="navigateToProductCreate()" color="primary">
-    Novo Produto
-  </button>
-  <button mat-raised-button (click)="toggleEstoqueBaixo()" color="warn">
-    {{ mostrarEstoqueBaixo ? 'Mostrar Todos os Produtos' : 'Mostrar Estoque Baixo' }}
-  </button>
-  <input 
-    type="text" 
+<main>
+  <mat-card>
+  <div class="form-grid">  
+    <input type="text" 
     placeholder="Pesquisar produto" 
     [(ngModel)]="searchTerm" 
     (input)="filterProducts()"
     class="pesquisa">
+
+    <button mat-raised-button (click)="navigateToProductCreate()" color="primary">
+      Novo Produto +
+    </button>
   <app-product-read [products]="filteredProducts"></app-product-read>
-</mat-card>
+  </div>
+  </mat-card>
+</main>

@@ -1,9 +1,6 @@
 /* Fundo do container */
 .mat-elevation-z4 {
-    background: linear-gradient(to bottom right, #2a003f, #1a1a1a); /* Fundo com gradiente escuro */
-    border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
 }
 
 /* Estilo geral da tabela */
@@ -13,17 +10,20 @@ table {
     border-spacing: 0;
     overflow: hidden;
     border-radius: 12px;
-    background-color: #1e1e1e;
+    background-color: rgb(0, 0, 0);
+    font-family: 'Rockwell', Arial, sans-serif;
+    font-size: 20px;
 }
 
 /* Cabeçalho */
 th {
-    background-color: #2c2c2c;
+    background-color: #920404;
     color: #f1f1f1;
     font-weight: bold;
-    padding: 16px;
+    padding: 20px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    font-family: 'Rockwell', Arial, sans-serif;
 }
 
 /* Células */

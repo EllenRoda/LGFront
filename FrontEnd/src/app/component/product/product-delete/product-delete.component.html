@@ -4,73 +4,61 @@
       <div class="form-grid">
       <mat-form-field appearance="outline">
         <mat-label>Nome</mat-label>
-        <mat-icon matPrefix>inventory_2</mat-icon>
         <input matInput placeholder="Nome" [value]="product.proNome" disabled>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Preço de Custo</mat-label>
-        <mat-icon matPrefix>attach_money</mat-icon>
         <input matInput placeholder="Preço de custo (R$)" [value]="product.proPrecoCusto" disabled min="0">
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Preço de Venda</mat-label>
-        <mat-icon matPrefix>price_check</mat-icon>
         <input matInput placeholder="Preço de venda (R$)" [value]="product.proPrecoVenda" disabled min="0">
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Estoque</mat-label>
-        <mat-icon matPrefix>stacked_bar_chart</mat-icon>
         <input matInput placeholder="Estoque" [value]="product.proEstoque" disabled min="0">
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Descrição</mat-label>
-        <mat-icon matPrefix>description</mat-icon>
         <input matInput placeholder="Descrição" [value]="product.proDescricao" disabled>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Categoria</mat-label>
-        <mat-icon matPrefix>description</mat-icon>
         <input matInput placeholder="Categoria" [value]="product.proCategoria" disabled>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Código de Barras</mat-label>
-        <mat-icon matPrefix>qr_code_scanner</mat-icon>
         <input matInput placeholder="Código de Barras" [value]="product.proCodigoBarras" disabled>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Marca</mat-label>
-        <mat-icon matPrefix>description</mat-icon>
         <input matInput placeholder="Marca" [value]="product.proMarca" disabled>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Produto Ativo?</mat-label>
-        <mat-icon matPrefix>description</mat-icon>
         <input matInput placeholder="Produto Ativo" [value]="product.proAtivo" disabled>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Frete Gratis?</mat-label>
-        <mat-icon matPrefix>check_circle</mat-icon>
         <input matInput placeholder="Frete Gratis" [value]="product.proFreteGratis" disabled>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Data de Cadastro</mat-label>
-        <mat-icon matPrefix>calendar_today</mat-icon>
         <input matInput [value]="(product.proDataCadastro | date:'dd/MM/yyyy')" disabled>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Data de Atualização</mat-label>
-        <mat-icon matPrefix>update</mat-icon>
         <input matInput [value]="(product.proDataAtualizacao | date:'dd/MM/yyyy')" disabled>
       </mat-form-field>
 
