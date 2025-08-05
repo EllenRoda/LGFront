@@ -1,16 +1,21 @@
 <main>
   <mat-card>
-  <div class="form-grid">  
+  <div class="form-grid" style="gap: 10px; display: flex;" >  
     <input type="text" 
     placeholder="Pesquisar produto" 
     [(ngModel)]="searchTerm" 
     (input)="filterProducts()"
-    class="pesquisa">
+    class="pesquisa" style="gap: 10px; display: flex; justify-content:flex-start" >
 
-    <button mat-raised-button (click)="navigateToProductCreate()" color="primary">
+    <button mat-raised-button (click)="navigateToProductCreate()" color="primary" style=" gap: 10px; display: flex; justify-content:flex-end">
       Novo Produto +
     </button>
-  <app-product-read [products]="filteredProducts"></app-product-read>
+
+  
   </div>
-  </mat-card>
+  </mat-card> 
+ 
+ 
+  <app-product-read [products]="filteredProducts"></app-product-read>
+  
 </main>

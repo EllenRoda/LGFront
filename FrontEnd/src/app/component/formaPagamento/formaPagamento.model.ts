@@ -1,8 +1,7 @@
 export interface FormaPagamento {
     fpgId?: number;
-    fpgTipo: string;
+    fpgCredito: string;
+    fpgFechamento: string;
     fpgDescricao: string;
-    fpgPermiteParcelamento: boolean;
-    fpgNumMaxParcelas: number;
-    fpgTaxaAdicional: number;
+    fpgStatus: string
 }

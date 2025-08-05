@@ -11,11 +11,10 @@ import { Router } from '@angular/router';
 export class FormaPagamentoCreateComponent implements OnInit {
   // Inicializa o objeto formaPagamento com uma descrição vazia
   formaPagamento: FormaPagamento = {
+    fpgCredito: '',
+    fpgFechamento: '',
     fpgDescricao: '',
-    fpgTipo: '',
-    fpgPermiteParcelamento: false,
-    fpgNumMaxParcelas: 1,
-    fpgTaxaAdicional: 0
+    fpgStatus: ''
   };
 
   // Injeta o serviço formaPagamentoService e o roteador Router no construtor

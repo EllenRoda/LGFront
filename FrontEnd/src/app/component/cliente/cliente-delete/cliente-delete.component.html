@@ -63,7 +63,9 @@
     </div>
   </form>
     <!-- Seção: Contato -->
-    <h3 class="subtitulo">Contato</h3>
+  <div class="com-cor-diferente">
+      <mat-card-title>Contato</mat-card-title>
+  </div>
   <form>
     <div class="form-grid">
     <mat-form-field appearance="outline">
@@ -85,12 +87,10 @@
     <!-- Botões -->
     <div class="botoes">
       <button mat-raised-button color="warn" class="btnExcl" (click)="deleteCliente()">
-        <mat-icon>delete</mat-icon>
         Excluir
       </button>
 
       <button mat-raised-button class="btnCancel" (click)="cancel()">
-        <mat-icon>cancel</mat-icon>
         Cancelar
       </button>
     </div>

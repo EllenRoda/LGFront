@@ -7,9 +7,14 @@
       <td mat-cell *matCellDef="let row">{{row.fpgId}}</td>
     </ng-container>
 
-    <ng-container matColumnDef="fpgTipo">
-      <th mat-header-cell *matHeaderCellDef>Nome</th>
-      <td mat-cell *matCellDef="let row">{{row.fpgTipo}}</td>
+    <ng-container matColumnDef="fpgCredito">
+      <th mat-header-cell *matHeaderCellDef>Pagamento</th>
+      <td mat-cell *matCellDef="let row">{{row.fpgCredito}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="fpgFechamento">
+      <th mat-header-cell *matHeaderCellDef>O Dia do Fechamento</th>
+      <td mat-cell *matCellDef="let row">{{row.fpgFechamento}}</td>
     </ng-container>
 
     <ng-container matColumnDef="fpgDescricao">
@@ -17,19 +22,9 @@
       <td mat-cell *matCellDef="let row">{{row.fpgDescricao}}</td>
     </ng-container>
 
-    <ng-container matColumnDef="fpgPermiteParcelamento">
-      <th mat-header-cell *matHeaderCellDef>Status Parcelamento</th>
-      <td mat-cell *matCellDef="let row">{{row.fpgPermiteParcelamento}}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="fpgNumMaxParcelas">
-      <th mat-header-cell *matHeaderCellDef>Máximo de Parcelas</th>
-      <td mat-cell *matCellDef="let row">{{row.fpgNumMaxParcelas + " parcelas mensais"}}</td>
-    </ng-container>
-
-    <ng-container matColumnDef="fpgTaxaAdicional">
-      <th mat-header-cell *matHeaderCellDef>Taxa</th>
-      <td mat-cell *matCellDef="let row">{{row.fpgTaxaAdicional * 100 + "%"}}</td>
+    <ng-container matColumnDef="fpgStatus">
+      <th mat-header-cell *matHeaderCellDef>Status</th>
+      <td mat-cell *matCellDef="let row">{{row.fpgStatus}}</td>
     </ng-container>
 
     <ng-container matColumnDef="actions">

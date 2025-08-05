@@ -13,11 +13,10 @@ export class FormaPagamentoReadComponent implements OnInit {
 
   displayedColumns: string[] = [
     'fpgId',
-    'fpgTipo',
+    'fpgCredito',
+    'fpgFechamento',
     'fpgDescricao',
-    'fpgPermiteParcelamento',
-    'fpgNumMaxParcelas',
-    'fpgTaxaAdicional',
+    'fpgStatus',
     'actions'
   ];
 

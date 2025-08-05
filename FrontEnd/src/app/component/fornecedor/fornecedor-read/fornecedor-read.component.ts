@@ -15,12 +15,13 @@ export class FornecedorReadComponent implements OnInit {
     'forId',
     'forNomeFantasia',
     'forCpf',
-    'forStatus',
     
     'endCidade',
     
     'conCelular',
     'conEmail',
+    
+    'forStatus',
     'action'
   ];
   // Injeta o serviço FornecedorService no construtor

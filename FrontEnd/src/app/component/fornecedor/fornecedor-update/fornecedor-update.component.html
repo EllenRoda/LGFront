@@ -21,7 +21,7 @@
 
         <mat-form-field appearance="outline">
             <mat-label>CPF</mat-label>
-            <input matInput [(ngModel)]="fornecedor.forCpf" name="forCpf">
+            <input matInput [(ngModel)]="fornecedor.forCpf" name="forCpf" disabled>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
@@ -44,10 +44,14 @@
             </mat-select>
         </mat-form-field>
         </div>
+    </form>    
 
-        <!-- Seção: Endereço -->
-        <h3 class="subtitulo">Endereço</h3>
-
+      <!-- Seção: Endereço -->
+    <div class="com-cor-diferente">
+        <mat-card-title>Endereco</mat-card-title>
+    </div>
+    <form>
+        <div class="form-grid">
         <mat-form-field appearance="outline">
             <mat-label>Rua</mat-label>
             <input matInput [(ngModel)]="fornecedor.endRua" name="endRua">
@@ -72,10 +76,15 @@
             <mat-label>Estado</mat-label>
             <input matInput [(ngModel)]="fornecedor.endEstado" name="endEstado">
         </mat-form-field>
+        </div>
+    </form>    
 
         <!-- Seção: Contato -->
-        <h3 class="subtitulo">Contato</h3>
-
+    <div class="com-cor-diferente">
+        <mat-card-title>Contato</mat-card-title>
+    </div>
+    <form>
+        <div class="form-grid">
         <mat-form-field appearance="outline">
             <mat-label>Celular</mat-label>
             <input matInput [(ngModel)]="fornecedor.conCelular" name="conCelular">
@@ -90,6 +99,7 @@
             <mat-label>E-mail</mat-label>
             <input matInput [(ngModel)]="fornecedor.conEmail" name="conEmail">
         </mat-form-field>
+        </div>
     </form>
 
     <div class="botoes">

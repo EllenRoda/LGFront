@@ -1,6 +1,6 @@
 .fundo1{
     width: 100%;
-    background: linear-gradient(to bottom, rgb(240, 240, 240), #f3f3f3);
+    background: linear-gradient(to bottom, rgb(220, 220, 220), #e0e0e0);
     border-radius: 23px;
     border: 2px solid #ff0000;
     box-shadow: 0 0 2px #ff0000, 0 0 4px #a72902 inset; /* LED mais sutil */
@@ -25,10 +25,10 @@ div{
 }
 .cor-normal{
   background-color: #000000;
-  color: #ffffff;
+  color: #dc1515;
 }
 .com-cor-diferente{
-  background-color: #dbdbdb;
+  background-color: #c6c6c6;
   color: #000000;
 }
 .form-grid {
@@ -44,114 +44,52 @@ div{
 }
 }
 
-/* Layout geral do formulário */
-form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 10px;
-  }
-  
-  /* Campos que devem ocupar a linha toda */
-  mat-form-field.full-width {
-    grid-column: span 2;
-  }
-  
-  /* Card */
-  mat-card {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 30px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Título principal */
-  mat-card-title.titulo {
-    font-size: 26px;
-    color: #3f51b5;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  /* Subtítulos das seções */
-  .subtitulo {
-    grid-column: span 2;
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-    margin: 20px 0 10px 0;
-  }
-  
-  /* Campos de formulário */
-  mat-form-field {
-    width: 100%;
-  }
-  
-  /* Botões */
-  .botoes {
-    grid-column: span 2;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
-  button {
-    height: 45px;
-    min-width: 120px;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 100%;
-    color: #fff;
-    transition: all 0.3s ease;
-  }
-  .btnExcl{
-    background-color: #2e7d32;
-  }
-  .btnCancel{
-    background-color: #d32f2f;
-  }
-  
-  /* Estilo botão salvar */
-  button.mat-raised-button {
-    background-color: #388e3c;
-    color: white;
-  }
-  
-  button.btnExcl:hover {
-    background-color: #145719;
-  }
-  
-  /* Estilo botão cancelar */
-  button.mat-stroked-button {
-    border: 1px solid #d32f2f;
-    color: #d32f2f;
-    background-color: white;
-  }
-  
-  button.btnCancel:hover {
-    background-color: #6b0f0f;
-  }
+/* Botões */
+.botoes {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
 
-  mat-form-field.full-width {
-    grid-column: span 2;
-  }
+button {
+  height: 45px;
+  min-width: 120px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 50%;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  font-family: 'Rockwell', Arial, sans-serif;
+  font-size: 20px;
+}
+.btnExcl{
+  background-color: #038b09;
+}
+.btnCancel{
+  background-color: #a10101;
+}
 
+/* Estilo botão salvar */
+button.mat-raised-button {
+  background-color: #388e3c;
+  color: rgb(220, 13, 13);
+}
 
-  
+button.btnExcl:hover {
+  background-color: #016106;
+  color: #000000;
+}
 
-  
-  /* Responsividade opcional */
-  @media (max-width: 768px) {
-    form {
-      grid-template-columns: 1fr;
-    }
-    .subtitulo, .botoes {
-      grid-column: span 1;
-    }
-  }
-  
+/* Estilo botão cancelar */
+button.mat-stroked-button {
+  border: 1px solid #d32f2f;
+  color: #c20000;
+}
+
+button.btnCancel:hover {
+  background-color: #bf0202;
+  color: #000000;
+}

@@ -1,6 +1,6 @@
 .fundo1{
     width: 100%;
-    background: linear-gradient(to bottom, rgb(240, 240, 240), #f3f3f3);
+    background: linear-gradient(to bottom, rgb(220, 220, 220), #e0e0e0);
     border-radius: 23px;
     border: 2px solid #ff0000;
     box-shadow: 0 0 2px #ff0000, 0 0 4px #a72902 inset; /* LED mais sutil */
@@ -25,10 +25,10 @@ div{
 }
 .cor-normal{
   background-color: #000000;
-  color: #ffffff;
+  color: #dc1515;
 }
 .com-cor-diferente{
-  background-color: #dbdbdb;
+  background-color: #c6c6c6;
   color: #000000;
 }
 .form-grid {
@@ -65,7 +65,7 @@ button {
   font-family: 'Rockwell', Arial, sans-serif;
   font-size: 20px;
 }
-.btnSave{
+.btnExcl{
   background-color: #038b09;
 }
 .btnCancel{
@@ -75,10 +75,10 @@ button {
 /* Estilo botão salvar */
 button.mat-raised-button {
   background-color: #388e3c;
-  color: white;
+  color: rgb(220, 13, 13);
 }
 
-button.btnSave:hover {
+button.btnExcl:hover {
   background-color: #016106;
   color: #000000;
 }
@@ -86,11 +86,10 @@ button.btnSave:hover {
 /* Estilo botão cancelar */
 button.mat-stroked-button {
   border: 1px solid #d32f2f;
-  color: #d32f2f;
-  background-color: white;
+  color: #c20000;
 }
 
 button.btnCancel:hover {
-  background-color: #810202;
+  background-color: #bf0202;
   color: #000000;
 }

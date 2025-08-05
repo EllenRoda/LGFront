@@ -48,11 +48,11 @@ button:active {
 
 }
 
-.form-grid {
+/*.form-grid {
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
   margin: 5px 0px 5px 0px;
-}
+}*/
 
 .pesquisa:focus {
     border-color: #048af7;

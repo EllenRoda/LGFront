@@ -14,12 +14,13 @@ export class ClienteReadComponent {
     'cliId',
     'cliNome',
     'cliCpf',
-    'cliStatus',
 
     'conCelular',
     'conEmail',
     
     'endCidade',
+    
+    'cliStatus',
     'action'
   ];
 
