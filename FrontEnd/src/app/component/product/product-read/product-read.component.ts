@@ -17,7 +17,7 @@ export class ProductReadComponent implements OnInit {
     'proEstoque',
     'proCategoria', 
     'proAtivo', 
-    'forNomeFantasia', 
+    /*'forNomeFantasia',*/ 
     'actions'];
   // Injeta o serviço ProductService no construtor
   constructor(private productService: ProductService) { }

@@ -1,5 +1,7 @@
 <mat-card class="fundo1">
+  <div class="cor-normal">
   <mat-card-title>Excluir Produto</mat-card-title>
+  </div>
     <form>
       <div class="form-grid">
       <mat-form-field appearance="outline">
@@ -70,6 +72,7 @@
       </div>
 
       <!-- Botões -->
+      <div class="botoes">
       <button class="btnExcl" (click)="deleteProduct()">
         Excluir
       </button>
@@ -77,5 +80,6 @@
       <button class="btnCancel" (click)="cancel()">
         Cancelar
       </button>
+      </div>
     </form>
 </mat-card>

@@ -1,5 +1,7 @@
-<mat-card>
+<mat-card class="fundo1">
+    <div class="cor-normal">
     <mat-card-title class="titulo">Atualizar Produto</mat-card-title>
+    </div>
         <form>
             <div class="form-grid">
             <mat-form-field appearance="outline">
@@ -34,7 +36,7 @@
 
             <mat-form-field appearance="outline">
                 <mat-label>Código de Barras</mat-label>
-                <input matInput placeholder="Código de barras" [(ngModel)]="product.proCodigoBarras" name="proCodigoBarras" required>
+                <input matInput placeholder="Código de barras" [(ngModel)]="product.proCodigoBarras" name="proCodigoBarras" disabled>
             </mat-form-field>
 
             <mat-form-field appearance="outline">
@@ -60,9 +62,7 @@
 
             <mat-form-field appearance="outline">
                 <mat-label>Data de Cadastro</mat-label>
-                <input matInput [matDatepicker]="picker1" placeholder="Data de Cadastro" [(ngModel)]="product.proDataCadastro" name="proDataCadastro" required>
-                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-                <mat-datepicker #picker1></mat-datepicker>
+                <input matInput [value]="(product.proDataCadastro | date:'dd/MM/yyyy')" disabled>
             </mat-form-field>
 
             <mat-form-field appearance="outline">
@@ -71,7 +71,7 @@
                 <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                 <mat-datepicker #picker2></mat-datepicker>
             </mat-form-field>
-            </div>
+            </div>    
 
             <div class="forne">
             <!-- Fornecedor -->
