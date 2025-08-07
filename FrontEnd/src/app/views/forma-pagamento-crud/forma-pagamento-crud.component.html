@@ -7,10 +7,14 @@
         (input)="filterFormaPagamento()"
         class="pesquisa">
 
-        <button mat-raised-button (click)="navigateToFormaPagamentoCreate()" color="primary">
+        <button 
+            mat-raised-button 
+            (click)="navigateToFormaPagamentoCreate()" 
+            color="primary"
+            class="novo-produto-btn">
             Nova Forma de pagamento +
         </button>
+    </div>    
     <app-forma-pagamento-read [formaPagamento]="filteredFormaPagamento"></app-forma-pagamento-read>
-    </div>
     </mat-card>
 </main>

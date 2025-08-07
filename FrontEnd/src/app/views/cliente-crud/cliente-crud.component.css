@@ -2,13 +2,12 @@
 main {
     min-height: 75vh; /* Define a altura mínima do conteúdo principal */
     padding: 40px 20px; /* Espaçamento interno do conteúdo */
-    
 }
 
 /* Estilização dos cartões (mat-card do Angular Material) */
 mat-card {
     border-radius: 10px;
-    background: linear-gradient(135deg, #f8f1f1 0%, #910000 100%);
+    background: linear-gradient(135deg, #f8f1f1 0%, #910000 100%); /* Gradiente de fundo */
     box-shadow: 0 4px 15px rgba(46, 1, 150, 0.2); /* Sombra combinando com o botão roxo */
     padding: 20px;
     margin-bottom: 20px;
@@ -22,8 +21,7 @@ button {
     font-weight: bold;
     width: fit-content;
     color: rgb(255, 255, 255);
-    background-color: rgb(75, 102, 2);
-
+    background-color: rgb(75, 102, 2); /* Cor de fundo do botão */
     border-radius: 16px;
     padding: 10px 20px;
     cursor: pointer;
@@ -34,27 +32,53 @@ button:active {
     transform: scale(0.95); /* Efeito de "afundar" levemente ao clicar */
     box-shadow: 0 3px 12px rgba(129, 2, 2, 0.4); /* Redução da sombra para simular profundidade */
 }
+
+/* Estilização do campo de pesquisa */
 .pesquisa {
-    margin: 10px;
+    margin: 20px;
     padding: 10px 20px;
     width: 280px;
-    border: 2px solid #fa0202; /* tom roxo */
+    border: 2px solid #fa0202; /* Tom roxo */
     border-radius: 8px;
-    background-color: #000000;
+    background-color: #000000; /* Cor de fundo preta */
     color: #ffffff;
     font-size: 16px;
     outline: none;
     transition: 0.3s ease-in-out;
-
 }
 
-.form-grid {
-  align-items: center;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 5px 0px 5px 0px;
-}
-
+/* Estilização quando o campo de pesquisa está em foco */
 .pesquisa:focus {
-    border-color: #048af7;
-    box-shadow: 0 0 8px #242424;
+    border-color: #048af7; /* Cor de borda azul clara ao focar */
+    box-shadow: 0 0 8px #242424; /* Sombra adicional */
+}
+
+/* Estilização do grid que contém o campo de pesquisa e o botão */
+.form-grid {
+    display: flex;             /* Flexbox para layout mais flexível */
+    justify-content: flex-start; /* Alinha o input à esquerda */
+    align-items: center;        /* Centraliza os itens verticalmente */
+    position: relative;         /* Necessário para o posicionamento absoluto do botão */
+    margin: 5px 0px;            /* Espaçamento vertical entre os elementos */
+}
+
+/* Estilização do botão "Novo Produto" posicionado no canto superior direito */
+.novo-produto-btn {
+    position: absolute;        /* Posicionamento absoluto dentro do .form-grid */
+    top: 10px;                 /* Distância do topo */
+    right: 10px;               /* Distância da direita */
+    font-family: 'Rockwell', Arial, sans-serif;
+    font-size: 26px;           /* Ajustando o tamanho da fonte do botão */
+    padding: 8px 16px;         /* Ajustando o preenchimento do botão */
+    border-radius: 12px;       /* Cantos arredondados */
+    background-color: rgb(105, 134, 26); /* Cor de fundo do botão (vermelho) */
+    color: #ffffff;            /* Cor do texto do botão */
+    cursor: pointer;           /* Cursor de ponteiro para indicar interatividade */
+    box-shadow: 0 4px 10px rgba(46, 1, 150, 0.2); /* Sombra sutil para destacar o botão */
+}
+
+/* Efeito visual ao clicar no botão "Novo Produto" */
+.novo-produto-btn:active {
+    transform: scale(0.95);    /* Efeito de "afundar" ao clicar */
+    box-shadow: 0 3px 12px rgba(129, 2, 2, 0.4); /* Sombra reduzida */
 }

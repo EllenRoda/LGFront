@@ -7,8 +7,12 @@
         (input)="filterCliente()"
         class="pesquisa" />
         
-        <button mat-raised-button (click)="navigateToClienteCreate()" color="primary">
-            Novo cliente +
+        <button 
+          mat-raised-button 
+          (click)="navigateToClienteCreate()" 
+          color="primary"
+          class="novo-produto-btn">
+          Novo cliente +
         </button>
       </div>   
       <app-cliente-read [clientes]="filteredCliente"></app-cliente-read>   

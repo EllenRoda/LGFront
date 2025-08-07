@@ -8,10 +8,14 @@
             (input)="filterFornecedor()"
             class="pesquisa">
         
-        <button mat-raised-button (click)="navigateToFornecedorCreate()" color="primary">
+        <button 
+            mat-raised-button 
+            (click)="navigateToFornecedorCreate()" 
+            color="primary"
+            class="novo-produto-btn">
             Novo fornecedor +
-        </button>       
-    <app-fornecedor-read [fornecedor]="filteredFornecedor"></app-fornecedor-read>
+        </button> 
     </div>
+    <app-fornecedor-read [fornecedor]="filteredFornecedor"></app-fornecedor-read>
     </mat-card>
 </main>
