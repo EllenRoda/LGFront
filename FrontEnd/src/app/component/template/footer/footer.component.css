@@ -1,5 +1,6 @@
 .footer {
-  background-color: rgba(138, 0, 0, 0.527);
+  /*background-color: rgba(0, 0, 0, 0.801);*/
+  background: linear-gradient(to bottom, #940000, #000000, #940000);
   padding: 8px 16px;
 }
 
@@ -14,6 +15,7 @@
   display: flexbox;
   align-items: center;
   gap: 8px;
+  padding: 173px;
 }
 
 .direita {
@@ -24,9 +26,13 @@
   border-radius: 16px;
   padding: 10px 20px;
   cursor: pointer;
+  color: #ffffff;
 }
 
 .linkedin-icon {
   font-size: 18px;
   color: purple;
+}
+span{
+  color: #ffffff;
 }
