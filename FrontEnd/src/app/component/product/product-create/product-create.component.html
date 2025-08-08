@@ -40,7 +40,12 @@
       <!-- Categoria -->
       <mat-form-field appearance="outline">
         <mat-label>Categoria</mat-label>
-        <input matInput placeholder="Categoria" [(ngModel)]="product.proCategoria" name="proCategoria" required>
+        <mat-select [(ngModel)]="product.proCategoria" name="proCategoria">
+          <mat-option value="Consoles">Consoles</mat-option>
+          <mat-option value="Acessórios">Acessórios</mat-option>
+          <mat-option value="Hardware Gamer (PC)">Hardware Gamer (PC)</mat-option>
+          <mat-option value="Moda Gamer">Moda Gamer</mat-option>
+        </mat-select>
       </mat-form-field>
 
       <!-- Código de Barras -->

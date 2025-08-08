@@ -1,0 +1,32 @@
+.footer {
+  background-color: rgba(138, 0, 0, 0.527);
+  padding: 8px 16px;
+}
+
+.form-grid {
+  display: flex;
+  justify-content: space-between; /* separa esquerda e direita */
+  align-items: center;
+  width: 100%;
+}
+
+.esquerda {
+  display: flexbox;
+  align-items: center;
+  gap: 8px;
+}
+
+.direita {
+  white-space: nowrap; /* impede quebra de linha */
+}
+
+.linkGit {
+  border-radius: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.linkedin-icon {
+  font-size: 18px;
+  color: purple;
+}
